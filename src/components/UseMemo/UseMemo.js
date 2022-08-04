@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from "react";
-import PropTypes from "prop-types";
 
 function expensiveFunction(number) {
   console.log("bắt đầu");
