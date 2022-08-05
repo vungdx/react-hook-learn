@@ -3,12 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { ThemeContext } from "./components/UseContext/ThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <>
+  <ThemeContext>
     <App />
-  </>
+  </ThemeContext>
 );
 
 // If you want to start measuring performance in your app, pass a function

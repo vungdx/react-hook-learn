@@ -1,5 +1,6 @@
 import ReactMemo from "./components/ReactMemo/ReactMemo";
 import UseCallback from "./components/UseCallback/UseCallback";
+import UseContext from "./components/UseContext/UseContext";
 import UseEffect from "./components/UseEffect/UseEffect";
 import UseReducer from "./components/UseReducer/UseReducer";
 import UseState from "./components/UseState/UseState";
@@ -7,7 +8,7 @@ import UseState from "./components/UseState/UseState";
 function App() {
   return (
     <div className="App">
-      <UseReducer />
+      <UseContext />
     </div>
   );
 }
