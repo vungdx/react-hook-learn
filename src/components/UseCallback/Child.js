@@ -13,7 +13,7 @@ function Child({ getData }) {
   }, [getData]);
   return (
     <div>
-      <h1>Child component data</h1>
+      <h1>Child component data -- List comments</h1>
       <ul>
         {comments.length > 0
           ? comments.map((comment) => <li key={comment.id}>{comment.name}</li>)

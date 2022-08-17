@@ -9,7 +9,7 @@ import UseState from "./components/UseState/UseState";
 function App() {
   return (
     <div className="App">
-      <UseMemo />
+      <UseCallback />
     </div>
   );
 }

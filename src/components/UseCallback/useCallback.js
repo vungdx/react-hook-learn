@@ -8,6 +8,10 @@ function UseCallback(props) {
     return fetch(`https://reqres.in/api/${type}`);
   }, []);
 
+  // const getData = (type) => {
+  //   return fetch(`https://reqres.in/api/${type}`);
+  // };
+
   const handleClick = () => {
     getData("users")
       .then((res) => res.json())
@@ -19,7 +23,7 @@ function UseCallback(props) {
 
   return (
     <div>
-      <h1>Parent component data: </h1>
+      <h1>Parent component data -- List users</h1>
       <button onClick={handleClick}>Get Users Data</button>
       <ul>
         {users.length > 0
