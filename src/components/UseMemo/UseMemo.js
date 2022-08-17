@@ -1,24 +1,24 @@
 import React, { useMemo, useState } from "react";
 
 function expensiveFunction(number) {
-  console.log("bắt đầu");
+  console.log("Begin");
   const start = new Date();
-  // đợi ở đay 3s
-  while (new Date() - start < 3000);
-  console.log("Kết thúc", new Date() - start, "ms");
-  return number * number;
+  while (new Date() - start < 2000); // đợi ở đây 2s
+  console.log("Finish after", new Date() - start, "ms");
+  return number + 10;
 }
 
 function UseMemo(props) {
   const [count, setCount] = useState(0);
-  const [num, setNum] = useState(20);
+  const [num, setNum] = useState(0);
+  // nếu giá trị tham số không bị thay đổi => useMemo có tác dụng không thực hiện lại tính toán này
+  // tốt cho performance, nhưng lại chiếm dung lượng bộ nhớ
+  // dùng useMemo khi có 1 tính toán quá mất thời gian thì nên dùng useMemo (với điều kiện tham số không bị thay đổi)
   const number = useMemo(() => {
-    // nếu giá trị tham số 10 mà không bị thay đổi => useMemo có tác dụng không thực hiện lại tính toán này
-    // tốt cho performance, nhưng lại chiếm dung lượng bộ nhớ
-    // tính toán quá mất thời gian thì nên dùng useMemo
-    expensiveFunction(num);
-    // expensiveFunction(10);
+    return expensiveFunction(num);
   }, [num]);
+
+  // const number = expensiveFunction(10);
   return (
     <div>
       <p>Count: {count}</p>
