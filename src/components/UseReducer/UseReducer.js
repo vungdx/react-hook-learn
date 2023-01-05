@@ -120,18 +120,20 @@ UseReducer.propTypes = {};
 
 export default UseReducer;
 
-/** 
- ACTION 'ADD_NEW_ITEM'
+/**
+INITIALSTATE: 
+const [count, countDispatch] = useReducer(countReducer, initialState);
 
- VIEW: Nhấn lên 1 button dispatch('ADD_NEW_ITEM')
+ACTION: 
+countDispatch('COUNT_INCREMENT') 
 
- REDUCERS chỉ là function nhận vào 2 tham số
-  (state, action)=>{
-    switch(action) {
-      case 'ADD_NEW_ITEM': 
-        state = state + 1
-      case 'ABC':
-        state = state...
-    }
+REDUCERS: là function nhận vào 2 tham số state và action
+const countReducer = (state, action)=> {
+  switch(action){
+    case 'COUNT_INCREMENT': 
+      state = state + 1
+    case 'ABC...': 
+      state = ...
   }
+}
 */
